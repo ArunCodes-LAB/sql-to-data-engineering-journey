@@ -67,14 +67,14 @@ WHERE student_ID IN (2,5,8);
 
 ##7. Before Update
 Here is the table before updating (notice the GRADE values
-<img width="817" height="231" alt="before update png" src="https://github.com/user-attachments/assets/0eb46ef8-10b8-4040-bf7a-76fc63b3f722" />
+<img width="817" height="231" alt="before update.png" src="https://github.com/user-attachments/assets/0eb46ef8-10b8-4040-bf7a-76fc63b3f722" />
 
 
 SELECT * FROM students_Records;
 
-7. After Update
+## 8. After Update
 Here is the table after updating values:
-<img width="823" height="233" alt="after update jpg" src="https://github.com/user-attachments/assets/633e126a-cc93-428b-86a8-5bbc716dc8a9" />
+<img width="823" height="233" alt="after update.jpg" src="https://github.com/user-attachments/assets/633e126a-cc93-428b-86a8-5bbc716dc8a9" />
 
 
 
