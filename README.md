@@ -11,7 +11,10 @@ This project demonstrates how to create a database, insert student records, and 
 ```sql
 CREATE DATABASE student_record_db;
 USE student_record_db;
-##2. TABLE CREATION
+```
+
+## 2. TABLE CREATION
+```sql
 CREATE TABLE students_Records(
     student_ID INT PRIMARY KEY,
     FirstName VARCHAR(25),
@@ -22,7 +25,10 @@ CREATE TABLE students_Records(
     PhoneNumber VARCHAR(11),
     Grade VARCHAR(10)
 );
+```
+
 ## 3. INSERT DATA
+```sql
 INSERT INTO students_Records(student_ID, FirstName, LastName, DateOfBirth, EnrollmentYear, Email, PhoneNumber, Grade)
 VALUES
 (1, 'Arun', 'Kumar', '2002-05-14', 2020, 'arun@example.com', NULL, 'A'),
@@ -33,13 +39,13 @@ VALUES
 (6, 'Karan', 'Patel', '2003-09-25', 2021, 'karan@example.com', '9112233445', 'A'),
 (7, 'Sneha', 'Reddy', '2002-12-05', 2020, 'sneha@example.com', NULL, 'B+'),
 (8, 'Mohit', 'Gupta', '2001-04-11', 2019, 'mohit@example.com', '9001122334', NULL);
+```
 
-4. Before Update
+## 4. Before Update
 Here is the table before updating (notice the NULL values):
 
-[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
-
 ## 5. Update PhoneNumber
+```sql
 SELECT * FROM students_Records WHERE PhoneNumber IS NULL;
 
 UPDATE students_Records
@@ -51,9 +57,10 @@ END
 WHERE student_ID IN (1,4,7);
 
 SELECT * FROM students_Records;
-
+```
 
 ## 6. UPDATE GRADE
+```sql
 SELECT * FROM students_Records WHERE Grade IS NULL;
 
 UPDATE students_Records
@@ -63,24 +70,18 @@ SET Grade = CASE
     WHEN student_ID = 8 THEN 'B'
 END
 WHERE student_ID IN (2,5,8);
+```
 
+## 7. Before Update
+Here is the table before updating (notice the GRADE values):
 
-##7. Before Update
-Here is the table before updating (notice the GRADE values
-<img width="817" height="231" alt="before update.png" src="https://github.com/user-attachments/assets/0eb46ef8-10b8-4040-bf7a-76fc63b3f722" />
+![before update](https://github.com/user-attachments/assets/0eb46ef8-10b8-4040-bf7a-76fc63b3f722)
 
-
+```sql
 SELECT * FROM students_Records;
+```
 
 ## 8. After Update
 Here is the table after updating values:
-<img width="823" height="233" alt="after update.jpg" src="https://github.com/user-attachments/assets/633e126a-cc93-428b-86a8-5bbc716dc8a9" />
 
-
-
-
-
-
-
-
-
+![after update](https://github.com/user-attachments/assets/633e126a-cc93-428b-86a8-5bbc716dc8a9)
